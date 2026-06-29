@@ -1,6 +1,6 @@
-# Active Directory Simulation – CyberTech Solutions
+# Active Directory Simulation – Sam Security Operations (Samsecops)
 
-This project demonstrates the deployment of a **Windows Server Domain Controller (Active Directory)** for a simulated organization, **CyberTech Solutions**. It covers domain setup, client integration, OU structuring, Group Policy implementation, and access control in an enterprise-like environment.
+This project demonstrates the deployment of a **Windows Server Domain Controller (Active Directory)** for a simulated organization, **Samsecops**. It covers domain setup, client integration, OU structuring, Group Policy implementation, and access control in an enterprise-like environment.
 
 ---
 
@@ -47,8 +47,8 @@ Server  PC1 (Win 8)   PC2 (Win XP)
 
 ## 🖥️ Domain Configuration
 
-- **Domain Name:** `cybertech.local`
-- **Server Name:** `CYBERTECH`
+- **Domain Name:** `samsecops.org`
+- **Server Name:** `SAMSECOPS`
 - **IP Address:** `10.0.5.5` (Static)
 - **Roles Installed:**
   - Active Directory Domain Services (AD DS)
@@ -62,9 +62,9 @@ Server  PC1 (Win 8)   PC2 (Win XP)
 Structured using **Active Directory Users and Computers (ADUC):**
 
 ```
-CyberTech.local
+samsecops.org
 ├── OU: IT Department
-│   ├── Alex.IT
+│   ├── NICK.IT
 │   └── Charles.IT
 │
 ├── OU: Sales
