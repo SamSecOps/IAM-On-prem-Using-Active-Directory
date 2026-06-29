@@ -6,7 +6,7 @@ This project demonstrates the deployment of a **Windows Server Domain Controller
 
 ## 🏢 Company Structure
 
-**CyberTech Solutions** is modeled as a small IT services firm with the following setup:
+**Samsecops** is modeled as a small IT services firm with the following setup:
 
 - 1 × Windows Server (Domain Controller)
 - 1 × Windows 8 Client PC (Accounts Department)
