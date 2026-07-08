@@ -47,7 +47,7 @@ Server  PC1 (Win 8)   PC2 (Win XP)
 
 ## 🖥️ Domain Configuration
 
-- **Domain Name:** `samsecops.org`
+- **Domain Name:** `samsecops.ai`
 - **Server Name:** `SAMSECOPS`
 - **IP Address:** `10.0.5.5` (Static)
 - **Roles Installed:**
