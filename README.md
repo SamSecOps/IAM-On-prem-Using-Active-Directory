@@ -65,10 +65,10 @@ Structured using **Active Directory Users and Computers (ADUC):**
 samsecops.org
 ├── OU: IT Department
 │   ├── NICK.IT
-│   └── Charles.IT
+│   └── Dan.IT
 │
 ├── OU: Sales
-│   └── Users
+│   └── Bukky.Sales
 ```
 
 ---
