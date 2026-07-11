@@ -62,24 +62,44 @@ Server  PC1 (Win 8)   PC2 (Win XP)
 Structured using **Active Directory Users and Computers (ADUC):**
 
 ```
-
 SAMSECOPS.ORG
 │
-├── US
-│   ├── IT
-│   ├── Digital Marketing
-│   └── Sales
+├── US (OU)
+│   ├── IT (Security Group)
+│   │   ├── Nick.IT
+│   │   ├── Dan.IT
+│   │   └── Godfrey.IT
+│   │
+│   ├── Digital Marketing (Security Group)
+│   │   ├── Parker.DM
+│   │   └── Samson.DM
+│   │
+│   └── Sales (Security Group)
+│       ├── Bukola.Sales
+│       └── Chris.Sales
 │
-├── UK
-│   ├── Marketing
-│   └── HR
+├── UK (OU)
+│   ├── Marketing (Security Group)
+│   │   ├── James.MKT
+│   │   └── Grace.MKT
+│   │
+│   └── Human Resources (Security Group)
+│       ├── Sarah.HR
+│       └── Michael.HR
 │
-├── UAE
-│   ├── Finance
-│   └── Consultation
+├── UAE (OU)
+│   ├── Finance (Security Group)
+│   │   ├── Ahmed.FIN
+│   │   └── Fatima.FIN
+│   │
+│   └── Consulting (Security Group)
+│       ├── Omar.CONS
+│       └── Noor.CONS
 │
-└── Nigeria
-    └── Warehouse
+└── Nigeria (OU)
+    └── Warehouse (Security Group)
+        ├── Chinedu.WH
+        └── Amina.WH
 
 
 ```
