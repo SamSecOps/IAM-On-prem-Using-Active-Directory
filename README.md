@@ -62,13 +62,26 @@ Server  PC1 (Win 8)   PC2 (Win XP)
 Structured using **Active Directory Users and Computers (ADUC):**
 
 ```
-samsecops.org
-├── OU: IT Department
-│   ├── NICK.IT
-│   └── Dan.IT
+
+SAMSECOPS.ORG
 │
-├── OU: Sales
-│   └── Bukky.Sales
+├── US
+│   ├── IT
+│   ├── Digital Marketing
+│   └── Sales
+│
+├── UK
+│   ├── Marketing
+│   └── HR
+│
+├── UAE
+│   ├── Finance
+│   └── Consultation
+│
+└── Nigeria
+    └── Warehouse
+
+
 ```
 
 ---
