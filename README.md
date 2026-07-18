@@ -139,7 +139,6 @@ The completed implementation demonstrates secure certificate-based authenticatio
 
 ---
 
-# Project Screenshots
 
 ## 📸 Project Screenshots
 
@@ -178,23 +177,6 @@ The completed implementation demonstrates secure certificate-based authenticatio
 
 ### Certificate Trust Validation
 ![Certificate Trust Chain](screenshots/certificate-trust-chain.png)
-
-Include screenshots demonstrating:
-
-- Windows Server 2022 installation
-- Active Directory Domain Services (AD DS)
-- Domain Controller promotion
-- Organizational Unit (OU) hierarchy
-- Security Groups
-- User account creation
-- Group Policy Objects (GPOs)
-- Windows 8 client joined to the domain
-- Active Directory Certificate Services installation
-- Enterprise Certification Authority
-- Certificate Templates
-- Certificate Auto-Enrollment
-- User Certificate Enrollment
-- Certificate Trust Validation
 
 ---
 
