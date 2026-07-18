@@ -143,7 +143,7 @@ The completed implementation demonstrates secure certificate-based authenticatio
 ## 📸 Project Screenshots
 
 ### Active Directory Deployment
-![Active Directory Installation](Screenshots/Screenshot-2026-07-09-163152.png)
+![Active Directory Installation](https://github.com/SamSecOps/IAM-On-prem-Using-Active-Directory/blob/main/Screenshots/Screenshot%202026-07-09%20163152.png)
 
 ### Domain Controller Promotion
 ![Domain Controller Promotion](screenshots/domain-controller-promotion.png)
