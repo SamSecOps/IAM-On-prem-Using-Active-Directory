@@ -1,150 +1,223 @@
-# Active Directory Simulation – Sam Security Operations (Samsecops)
+# Enterprise Identity and Access Management (IAM) Using Microsoft Active Directory
 
-This project demonstrates the deployment of a **Windows Server Domain Controller (Active Directory)** for a simulated organization, **Samsecops**. It covers domain setup, client integration, OU structuring, Group Policy implementation, and access control in an enterprise-like environment.
+## Project Overview
 
----
+This project demonstrates the design, deployment, and administration of a complete on-premises enterprise Identity and Access Management (IAM) environment using Windows Server 2022 and Windows 8 Enterprise.
 
-## 🏢 Company Structure
+The environment simulates a multinational organization, **SAMSECOPS.ORG**, where centralized identity management, authentication, authorization, certificate-based trust, and security policy enforcement are implemented using Microsoft Active Directory technologies.
 
-**Samsecops** is modeled as a small IT services firm with the following setup:
-
-- 1 × Windows Server (Domain Controller)
-- 1 × Windows 8 Client PC (Accounts Department)
-- 1 × Windows XP Client PC (Legacy System)
+The project includes the deployment and configuration of Active Directory Domain Services (AD DS), Active Directory Certificate Services (AD CS), Domain Name System (DNS), Dynamic Host Configuration Protocol (DHCP), Organizational Units (OUs), Security Groups, Group Policy Objects (GPOs), and Public Key Infrastructure (PKI) to provide centralized administration and secure enterprise resource management.
 
 ---
 
-## 🎯 Project Objectives
+# Technologies Used
 
-- Configure an Active Directory Domain Controller
-- Join client machines to the domain
-- Design Organizational Units (OUs)
-- Implement Group Policies (GPOs)
-- Simulate centralized identity and access management
-
----
-
-## 🌐 Network Design
-
-```
-Internet
-   ↓
-Router (Gateway: 10.0.5.1)
-   ↓
-Switch
- ┌──────┬─────────────┬──────────────┐
- │      │             │              │
-Server  PC1 (Win 8)   PC2 (Win XP)
-```
-
-| Device           | IP Address | Role                          |
-|------------------|------------|-------------------------------|
-| Windows Server   | 10.0.5.5   | Domain Controller (AD DS)     |
-| Windows 8 PC     | DHCP       | Client (Accounts Department)  |
-| Windows XP PC    | DHCP       | Legacy Client                 |
+- Windows Server 2022
+- Windows 8 Enterprise
+- Active Directory Domain Services (AD DS)
+- Active Directory Certificate Services (AD CS)
+- Public Key Infrastructure (PKI)
+- Domain Name System (DNS)
+- Dynamic Host Configuration Protocol (DHCP)
+- Group Policy Management
+- Microsoft Management Console (MMC)
+- Windows PowerShell
+- Windows Command Prompt
+- Oracle VirtualBox
+- TCP/IP Networking
 
 ---
 
-## 🖥️ Domain Configuration
+# Project Objectives
 
-- **Domain Name:** `samsecops.ai`
-- **Server Name:** `SAMSECOPS`
-- **IP Address:** `10.0.5.5` (Static)
-- **Roles Installed:**
-  - Active Directory Domain Services (AD DS)
-  - DNS
-  - DHCP
+- Deploy a Windows Server 2022 Domain Controller
+- Configure Active Directory Domain Services (AD DS)
+- Deploy Domain Name System (DNS)
+- Configure Dynamic Host Configuration Protocol (DHCP)
+- Design an enterprise Organizational Unit (OU) structure
+- Create and manage users, computers, and security groups
+- Implement Role-Based Access Control (RBAC)
+- Configure and enforce Group Policy Objects (GPOs)
+- Deploy Active Directory Certificate Services (AD CS)
+- Configure an Enterprise Certification Authority
+- Implement Public Key Infrastructure (PKI)
+- Issue and validate trusted digital certificates
 
 ---
 
-## 🗂️ Organizational Units (OUs)
+# Enterprise Environment
 
-Structured using **Active Directory Users and Computers (ADUC):**
+The project simulates a multinational organization operating across multiple geographical regions.
 
 ```
 SAMSECOPS.ORG
-│
-├── US (OU)
-│   ├── IT (Security Group)
-│   │   ├── Nick.IT
-│   │   ├── Dan.IT
-│   │   └── Godfrey.IT
-│   │
-│   ├── Digital Marketing (Security Group)
-│   │   ├── Parker.DM
-│   │   └── Samson.DM
-│   │
-│   └── Sales (Security Group)
-│       ├── Bukola.Sales
-│       └── Chris.Sales
-│
-├── UK (OU)
-│   ├── Marketing (Security Group)
-│   │   ├── James.MKT
-│   │   └── Grace.MKT
-│   │
-│   └── Human Resources (Security Group)
-│       ├── Sarah.HR
-│       └── Michael.HR
-│
-├── UAE (OU)
-│   ├── Finance (Security Group)
-│   │   ├── Ahmed.FIN
-│   │   └── Fatima.FIN
-│   │
-│   └── Consulting (Security Group)
-│       ├── Omar.CONS
-│       └── Noor.CONS
-│
-└── Nigeria (OU)
-    └── Warehouse (Security Group)
-        ├── Chinedu.WH
-        └── Amina.WH
 
+├── United States
+│   ├── IT
+│   ├── Digital Marketing
+│   └── Sales
+│
+├── United Kingdom
+│   ├── Marketing
+│   └── Human Resources
+│
+├── United Arab Emirates
+│   ├── Finance
+│   └── Consulting
+│
+└── Nigeria
+    └── Warehouse
+```
 
+Each department contains dedicated Organizational Units (OUs), users, and security groups to simulate centralized enterprise administration.
+
+---
+
+# Infrastructure Configuration
+
+| Component | Configuration |
+|-----------|---------------|
+| Domain | SAMSECOPS.ORG |
+| Domain Controller | SAMSECOPS |
+| Operating System | Windows Server 2022 |
+| Client Operating System | Windows 8 Enterprise |
+| Domain Controller IP | 10.0.5.5 (Static) |
+| DNS Server | 10.0.5.5 |
+| DHCP | Installed |
+| Virtualization Platform | Oracle VirtualBox |
+
+---
+
+# Active Directory Implementation
+
+The environment demonstrates:
+
+- Active Directory forest deployment
+- Domain Controller promotion
+- Organizational Unit (OU) design
+- User account administration
+- Computer account management
+- Security Group administration
+- Role-Based Access Control (RBAC)
+- Centralized authentication and authorization
+- Password and account management
+
+---
+
+# Group Policy Implementation
+
+Enterprise Group Policy Objects (GPOs) were created and linked to Organizational Units to centrally enforce security policies.
+
+Implemented policies include:
+
+- Restricting access to removable storage devices
+- Certificate Auto-Enrollment
+- Enterprise Certificate Policy
+
+Policy deployment was validated using:
+
+```powershell
+gpupdate /force
 ```
 
 ---
 
-## 🔐 Group Policy (GPO)
+# Active Directory Certificate Services (AD CS)
 
-Configured via **Group Policy Management Console (gpmc.msc):**
+To extend the enterprise Identity and Access Management environment, Active Directory Certificate Services (AD CS) was deployed to establish a Public Key Infrastructure (PKI) for centralized certificate issuance and management.
 
-- **GPO Name:** `DisableRemovableDrives`
-- **Linked To:** IT Department OU
-- **Policy Path:**
-  ```
-  Computer Configuration → Administrative Templates → System → Removable Storage Access
-  ```
-- **Setting:**
-  - **All Removable Storage Classes: Deny All Access → Enabled**
+The implementation includes:
 
-**Outcome:**  
-USB and external storage devices are blocked for users within the targeted OU.
+- Enterprise Certification Authority deployment
+- Certificate template configuration
+- Certificate Auto-Enrollment
+- User certificate enrollment
+- Trusted Root Certification Authority configuration
+- Certificate trust chain validation
 
----
-
-## 📸 Screenshots
-
-- [Active Directory Domain Structure](https://github.com/your-username/your-repo/blob/main/screenshots/ad-structure.png)
-- [GPO Configuration Screenshot](https://github.com/your-username/your-repo/blob/main/screenshots/gpo-config.png)
-- [Client Joined to Domain](https://github.com/your-username/your-repo/blob/main/screenshots/domain-join.png)
-- [USB Access Denied Result](https://github.com/your-username/your-repo/blob/main/screenshots/usb-denied.png)
-
-> Replace the links above with your actual GitHub screenshot URLs.
+The completed implementation demonstrates secure certificate-based authentication and centralized certificate lifecycle management within the Active Directory environment.
 
 ---
 
-## 🧠 Key Takeaways
+# Project Screenshots
 
-- Hands-on experience deploying and managing Active Directory
-- Implementation of centralized access control using GPOs
-- Practical OU design aligned with organizational structure
-- Real-world application of Identity and Access Management (IAM)
+## 📸 Project Screenshots
+
+### Active Directory Deployment
+![Active Directory Installation](screenshots/ad-installation.png)
+
+### Domain Controller Promotion
+![Domain Controller Promotion](screenshots/domain-controller-promotion.png)
+
+### Organizational Unit (OU) Structure
+![Organizational Units](screenshots/ou-structure.png)
+
+### User and Security Group Management
+![Active Directory Users and Computers](screenshots/ad-users-groups.png)
+
+### Group Policy Management
+![Group Policy](screenshots/group-policy.png)
+
+### Windows 8 Client Joined to the Domain
+![Domain Join](screenshots/domain-join.png)
+
+### Active Directory Certificate Services (AD CS)
+![AD CS Installation](screenshots/adcs-installation.png)
+
+### Enterprise Certification Authority
+![Certification Authority](screenshots/certification-authority.png)
+
+### Certificate Templates
+![Certificate Templates](screenshots/certificate-templates.png)
+
+### Certificate Auto-Enrollment Policy
+![Certificate Auto-Enrollment](screenshots/certificate-auto-enrollment.png)
+
+### Issued User Certificate
+![Issued Certificate](screenshots/issued-certificate.png)
+
+### Certificate Trust Validation
+![Certificate Trust Chain](screenshots/certificate-trust-chain.png)
+
+Include screenshots demonstrating:
+
+- Windows Server 2022 installation
+- Active Directory Domain Services (AD DS)
+- Domain Controller promotion
+- Organizational Unit (OU) hierarchy
+- Security Groups
+- User account creation
+- Group Policy Objects (GPOs)
+- Windows 8 client joined to the domain
+- Active Directory Certificate Services installation
+- Enterprise Certification Authority
+- Certificate Templates
+- Certificate Auto-Enrollment
+- User Certificate Enrollment
+- Certificate Trust Validation
 
 ---
 
-## 👤 Author
+# Key Skills Demonstrated
 
-**Samuel Agboola**  
-Cybersecurity Analyst
+- Identity and Access Management (IAM)
+- Active Directory Administration
+- Windows Server Administration
+- Active Directory Certificate Services (AD CS)
+- Public Key Infrastructure (PKI)
+- Role-Based Access Control (RBAC)
+- Group Policy Management
+- Windows Networking
+- DNS Administration
+- DHCP Administration
+- Enterprise Authentication
+- Certificate-Based Authentication
+- Security Policy Enforcement
+
+---
+
+# Author
+
+**Samuel O. Agboola**
+
+Cybersecurity Analyst | Identity and Access Management | Active Directory | Windows Server | Public Key Infrastructure | Security Operations
