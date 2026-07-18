@@ -152,31 +152,31 @@ The completed implementation demonstrates secure certificate-based authenticatio
 ![Organizational Units](https://github.com/SamSecOps/IAM-On-prem-Using-Active-Directory/blob/main/Screenshots/Screenshot%202026-07-09%20192458.png)
 
 ### User and Security Group Management
-![Active Directory Users and Computers](https://github.com/SamSecOps/IAM-On-prem-Using-Active-Directory/blob/main/Screenshots/Screenshot%202026-07-10%20232106.png)
+![Active Directory Users and Computers](https://github.com/SamSecOps/IAM-On-prem-Using-Active-Directory/blob/main/Screenshots/Screenshot%202026-07-11%20131325.png)
 
 ### Group Policy Management
-![Group Policy](screenshots/group-policy.png)
+![Group Policy](https://github.com/SamSecOps/IAM-On-prem-Using-Active-Directory/blob/main/Screenshots/Screenshot%202026-07-11%20075427.png)
 
 ### Windows 8 Client Joined to the Domain
-![Domain Join](screenshots/domain-join.png)
+![Domain Join](https://github.com/SamSecOps/IAM-On-prem-Using-Active-Directory/blob/main/Screenshots/Screenshot%202026-07-11%20052010.png)
 
 ### Active Directory Certificate Services (AD CS)
-![AD CS Installation](screenshots/adcs-installation.png)
+![AD CS Installation](https://github.com/SamSecOps/IAM-On-prem-Using-Active-Directory/blob/main/Screenshots/Screenshot%202026-07-16%20131322%20-%20Copy.png)
 
 ### Enterprise Certification Authority
-![Certification Authority](screenshots/certification-authority.png)
+![Certification Authority](https://github.com/SamSecOps/IAM-On-prem-Using-Active-Directory/blob/main/Screenshots/Screenshot%202026-07-17%20154049.png)
 
 ### Certificate Templates
-![Certificate Templates](screenshots/certificate-templates.png)
+![Certificate Templates](https://github.com/SamSecOps/IAM-On-prem-Using-Active-Directory/blob/main/Screenshots/Screenshot%202026-07-17%20214342.png)
 
 ### Certificate Auto-Enrollment Policy
-![Certificate Auto-Enrollment](screenshots/certificate-auto-enrollment.png)
+![Certificate Auto-Enrollment](https://github.com/SamSecOps/IAM-On-prem-Using-Active-Directory/blob/main/Screenshots/Screenshot%202026-07-16%20201226%20-%20Copy.png)
 
 ### Issued User Certificate
-![Issued Certificate](screenshots/issued-certificate.png)
+![Issued Certificate](https://github.com/SamSecOps/IAM-On-prem-Using-Active-Directory/blob/main/Screenshots/Screenshot%202026-07-17%20145216.png)
 
 ### Certificate Trust Validation
-![Certificate Trust Chain](screenshots/certificate-trust-chain.png)
+![Certificate Trust Chain](https://github.com/SamSecOps/IAM-On-prem-Using-Active-Directory/blob/main/Screenshots/Screenshot%202026-07-17%20210453.png)
 
 ---
 
