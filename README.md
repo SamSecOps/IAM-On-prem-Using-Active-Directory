@@ -152,7 +152,7 @@ The completed implementation demonstrates secure certificate-based authenticatio
 ![Organizational Units](https://github.com/SamSecOps/IAM-On-prem-Using-Active-Directory/blob/main/Screenshots/Screenshot%202026-07-09%20192458.png)
 
 ### User and Security Group Management
-![Active Directory Users and Computers](screenshots/ad-users-groups.png)
+![Active Directory Users and Computers](https://github.com/SamSecOps/IAM-On-prem-Using-Active-Directory/blob/main/Screenshots/Screenshot%202026-07-10%20232106.png)
 
 ### Group Policy Management
 ![Group Policy](screenshots/group-policy.png)
