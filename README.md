@@ -146,7 +146,7 @@ The completed implementation demonstrates secure certificate-based authenticatio
 ![Active Directory Installation](https://github.com/SamSecOps/IAM-On-prem-Using-Active-Directory/blob/main/Screenshots/Screenshot%202026-07-09%20163152.png)
 
 ### Domain Controller Promotion
-![Domain Controller Promotion](Screenshots/Screenshot-2026-07-09-164054.png)
+![Domain Controller Promotion](https://github.com/SamSecOps/IAM-On-prem-Using-Active-Directory/blob/main/Screenshots/Screenshot%202026-07-09%20164054.png)
 
 ### Organizational Unit (OU) Structure
 ![Organizational Units](screenshots/ou-structure.png)
